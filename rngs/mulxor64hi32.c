@@ -17,5 +17,11 @@ uint32_t mulxor64hi32() {
 }
 
 int main() {
-	rnt_all(mulxor64hi32);
+	rnt_Gen gen = {
+		.fn = mulxor64hi32,
+		.max = ~0, 
+		.period = 4294967296,
+	};
+
+	rnt_all(&gen);
 }
